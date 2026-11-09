@@ -7,8 +7,8 @@ void main() {
     await tester.pumpWidget(const CidadeInvisivelApp());
 
     expect(find.text('Câmera'), findsOneWidget);
-    expect(find.text('Localização'), findsOneWidget);
-    expect(find.text('Sensores'), findsOneWidget);
+    expect(find.text('Localização GPS'), findsOneWidget);
+    expect(find.text('Acelerômetro'), findsOneWidget);
     expect(find.text('Notificações'), findsOneWidget);
   });
 }
