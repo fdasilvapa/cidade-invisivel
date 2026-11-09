@@ -90,3 +90,16 @@ server/           # servidor Python + SQLite (API e app web)
 
 Classificação da foto por IA, "resolver com prova" (foto do depois), pontos e
 selos, notificações push (FCM/OneSignal) e rotas conscientes.
+
+## Deploy web (GitHub Pages)
+
+O workflow `.github/workflows/deploy-web.yml` roda `flutter analyze`, os testes e
+o build web a cada push na `main` e publica em
+`https://<usuario>.github.io/cidade-invisivel/`.
+
+O dono do repositório precisa ativar em **Settings → Pages → Source: GitHub
+Actions**; sem isso a etapa de deploy falha.
+
+> O Pages serve só arquivos estáticos. Sem o servidor (`server/server.py`) o app
+> abre, mas mostra "Sem conexão com o servidor", porque os registros e as fotos
+> dependem dele.
